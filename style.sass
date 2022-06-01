@@ -1,0 +1,244 @@
+
+// Variables
+
+$primary-color:#F0E5CF
+$footer-color-outer: #535252
+$footer-color-inner: #5f5d5d
+$secondary-color:#5F7161
+$secondary-color-hover:#4f5d51
+$footer-color: #656159
+$white: #fff
+$light-grey: #c3c3c3
+$max-width:1100px
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Montserrat', sans-serif
+  background-color: #8BC6EC
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)
+  color: $white
+  overflow-x: hidden
+
+  a
+      text-decoration: none
+      color: $white
+
+      &.project-info:hover
+        text-decoration: underline
+#main-header
+  background: $secondary-color
+  padding: 4rem 0
+
+.container
+  max-width: $max-width
+  margin: 0 auto
+  text-align: center
+
+h1#slogan
+  font-size: 2.3rem
+  margin-bottom: 1rem
+
+#author
+  font-family: 'Indie Flower', cursive
+  font-size: 160%
+  margin-top: 1rem
+
+span.dot
+  height: 10px
+  width: 10px
+  background-color: #6e8470
+  border-radius: 50%
+  display: inline-block
+
+
+
+
+#timeline
+  ul.timeline__projects
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)
+    padding: 50px 0
+
+    // Vertical Line 
+    li
+      list-style: none
+      position: relative
+      width: 6px
+      margin: 0 auto
+      padding-top: 50px
+      background: $white
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px      
+      div.list-container
+        position: relative
+        bottom: 0
+        width: 400px
+        padding: 1rem
+        background: $secondary-color
+        transition: all 0.5s ease-in-out
+        visibility: hidden
+        opacity: 0
+        border-radius: 0.3rem
+    
+        &:hover
+          background-color: $secondary-color-hover
+
+        &__skills
+            display: flex
+            margin: 1rem 0
+            gap: 0.5rem
+            flex-wrap: wrap
+
+            & span
+                background-color: #C6DE41
+                color: #6d8004
+                font-weight: bolder
+                padding: 0.3rem 0.4rem
+
+      &:nth-child(odd) div.list-container
+        left: 40px
+        transform: translate(200px, 0)
+
+      &:nth-child(even) div.list-container
+        left: -434px
+        transform: translate(-200px, 0)
+
+      &:after
+        content: ''
+        position: absolute
+        left: 50%
+        bottom: 0
+        width: 25px
+        height: 25px
+        background: inherit
+        transform: translateX(-50%)
+        border-radius: 50%
+        transition: background 0.5s ease-in-out
+
+  div.list-container:before
+    content: ''
+    position: absolute
+    bottom: 5px
+    width: 0
+    height: 0
+    border-style: solid
+
+  ul.timeline__projects li
+    &:nth-child(odd) div.list-container:before
+      left: -15px
+      border-width: 8px 16px 8px 0
+      border-color: transparent $secondary-color transparent transparent
+
+    &:nth-child(even) div.list-container:before
+      right: -15px
+      border-width: 8px 0 8px 16px
+      border-color: transparent transparent transparent $secondary-color
+
+    &.show
+      div.list-container
+        transform: none
+        visibility: visible
+        opacity: 1
+        box-shadow: rgba(14, 14, 15, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px
+
+
+      &:after
+        background: $secondary-color
+
+footer
+    margin-top: 4rem
+    color: $light-grey
+
+    & div.outer
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        background-color: $footer-color-outer
+
+        & > p
+            padding: 1rem 0
+
+
+    & div.inner
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-around
+        padding: 1rem 0 
+        font-size: smaller
+        background-color: $footer-color-inner
+
+        a.mail
+            color: $light-grey
+            &:hover
+                text-decoration: underline
+
+
+    div#social
+        & a
+          color: $light-grey
+          padding: 0 0.1rem
+          &::after
+            content: ' | '
+
+          &:last-child::after
+                content: ''
+          &:hover
+              opacity: 90%
+
+
+@media (max-width: 900px)
+
+    h1#slogan 
+        font-size: 2.1rem
+    #timeline ul.timeline__projects li
+        & div.list-container
+            width: 250px
+
+        &:nth-child(even) div.list-container
+            left: -284px
+
+@media (max-width: 600px)
+
+    h1#slogan
+        font-size: 1.6rem
+        padding: 0 3rem
+
+    #timeline ul.timeline__projects li
+        margin-left: 20px
+
+        div.list-container
+            width: calc(100vw - 90px)
+
+        &:nth-child(even) div.list-container
+            left: 40px
+
+            &:before
+                left: -15px
+                border-width: 8px 16px 8px 0
+                border-color: transparent $secondary-color transparent transparent
+    footer 
+        & .outer > p 
+            width: 60%
+            text-align: center
+        & .inner 
+            flex-direction: column-reverse
+
+            p.copyright 
+                margin-top: 1rem
+                padding: 0.5rem 0
+                border-top: 1px solid $light-grey
+
+            & #social
+                display: flex
+                flex-direction: column
+                gap: 0.5rem
+                & a
+                    text-align: left
+                    &::after
+                        content: ''
+    

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.min.css">
+  
+  <!-- Import Of Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <title>Knowledge Timeline</title>
+  <script src="https://kit.fontawesome.com/898280730c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <h1 id="slogan">Simple Ideas Change The World 💡</h1>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <h3 id="author">Portfolio von Leon Eifler</h3>
+      <i class="fa fa-envelope" aria-hidden="true"></i> info@leon-eifler.de
+
+    </div>
+  </header>
+
+  <section id="timeline">
+    <ul class="timeline__projects">
+      <li>
+        <div class="list-container">
+          <a><h3 class="list-container__title"><i class="fas fa-chevron-right"></i> Mai 2022: Local To-Do List</h3></a>
+          <p class="list-container__desc">Da ich gerne produktiv bin und einen Überblick über offene und erledigte Aufgaben besitze, habe ich mithilfe von JavaScript eine simple Web-App gebaut, welche mir das Anlegen, Editieren, Abhaken und Löschen der Aufgaben ermöglicht.</p>
+          Diese nicht kritischen Daten werden über die Webstorage API / LocaleStorage dauerhaft gespeichert und aktualisiert. Eine simple UI mit Fokus auf Usability rundet das Mini-Projekt ab.
+          <div class="list-container__skills">
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Materialize CSS</span>
+            <span>Webstorage API</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <a><h3 class="list-container__title"><i class="fas fa-chevron-right"></i> Mai 2022: Speedtest Bot</h3></a>
+          <p class="list-container__desc">Wie verhält sich eigentlich meine Download- und Uploadgeschwindigkeit meines derzeitigen Internet-Anbieters in meinem Heimnetzwerk?
+            Hierzu wird täglich ein Python-Skript auf meinem Server ausgeführt, welcher durch einen Webservice einen Geschwindigkeitstest durchführt und diese Analysedaten in eine .csv-Datei schreibt.
+            Informationen über die PING-Geschwindigkeit, Upload-Rate, Download-Rate, verwendeter Server, aber auch Dauer der Testausführung werden abgespeichert.
+            Diese Daten werden in einem zukünftigen Projekt analysiert und graphisch ausgewertet. (Geplant: Frühjahr 2023)
+          </p>
+          <div class="list-container__skills">
+            <span>Python</span>
+            <span>Selenium</span>
+            <span>Web Scraping</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3>
+            <i class="fas fa-chevron-right"></i> Mai 2022: Most Wanted Gas Station
+          </h3>
+          <p>
+            Wie finde ich die günstigste Tankstelle in Abhängigkeit meiner aktuellen Position? Ein Realweltproblem für die ich mithilfe von Python eine simple Terminal-App programmierte.
+            Eingabeparameter sind die aktuelle Adresse, die Postleitzahl oder der Stadtname. Durch Services die auf eine GEO-API zugreifen, können Längengrad und Breitengrad ermittelt werden. Anschließend wird erfragt welche Art von Sprit getankt werden soll.
+            Der Suchradius kann durch den Nutzer auf eine bestimmte Kilometeranzahl eingegrenzt werden.
+            Durch einen Algorithmus wird die günstigste Tankstelle in der Umgebung ermittelt (Webdienst-Daten) inklusive relevanter Metadaten (Adresse, Spritpreis, Entfernung).
+            Anschließend kann auf Wunsch des Nutzers automatisch ein Browserfenster geöffnet werden, wo der Standort der Tankstelle in Google Maps angezeigt wird.
+          </p>
+          <div class="list-container__skills">
+            <span>Python</span>
+            <span>Web Scraping</span>
+            <span>BeautifulSoup</span>
+          </div>
+        </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Feb. 2022: Pregnancy Report</h3>
+          <p>
+            Dieser Bot ermittelt anhand des voraussichtlichen Geburtstermins der Frau einen automatisierten Wochenbericht an die im Programm hinterlegte E-Mail-Adresse. Der jeweilige Wochenbericht enthält die wichtigsten Daten über die Entwicklung des Babys, dessen Größe durch den Vergleich mit gängigen Früchten oder Gemüse, die auftretenden körperlichen Veränderungen der Frau sowie Tipps und Tricks gegen auftretende Symptome.
+            Außerdem informiert der Bot über den prozentualen Fortschritt der Schwangerschaft bis zum Entbindungstermin.
+            Mittels Web Scraping und Python werden relevante Daten von den Website-Inhalten extrahiert und in ein HTML-Template mit schlanken CSS geschrieben. Anschließend wird das fertige Template versendet.
+          </p>
+          <div class="list-container__skills">
+            <span>Python</span>
+            <span>Web Scraping</span>
+            <span>BeautifulSoup</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Feb. 2022: Crypto Purchase History Sheet</h3>
+          <p>
+           Um bei der Investition in Kryptowährungen einen Überblick über getätigte Einzahlungen zu behalten, werden über die von der Krytpobörse Binance zur Verfügung gestellte API, historische Einzahlungsdaten abgegriffen. Die wichtigsten Attribute der Transaktion werden anschließend automatisiert über die Sheety API in ein Google Sheet geschrieben.
+           Das Projekt dient als Grundlage für ein weiteres Projekt, nämlich der monatlichen Benachrichtigung durch eine verschlüsselte Email, welche den Nutzer über den aktuellen Inhalt seines Kryptoportfolios bei der jeweiligen Börse informiert und gleichzeitig aufzeigt wie viel Geld er schon investiert hat, inklusive angefallener Gebühren. (Planung: Ende 2022)
+          </p>
+          <div class="list-container__skills">
+            <span>Python</span>
+            <span>Binance API</span>
+            <span>Sheety API</span>
+            <span>Google Sheets</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Jul. 2021: Fullstack-Entwickler bei SIEMENS Mobility GmbH</h3>
+          <p>
+            Meine Kernaufgaben in der Weiterentwicklung einer cloudbasierten Datenbank zeichneten sich vor allem durch Datenimports via Frontend-Schnittstellen oder Datenausleitungen mithilfe von Python in Excel- oder PDF-Format aus. Die Django WebApp wurde unter anderem durch meine Hilfe 
+            wichtiger Security-Checks unterzogen und daraus folgend die Rechteverwaltung mithilfe des Djano-Frameworks enorm verfeinert. 
+            Zudem entwickelte ich die Grundbasis für ein projektspezifisches CSS-Framework via SASS oder baute interaktive Templates mit JavaScript.
+          </p>
+          <div class="list-container__skills">
+            <span>Python</span>
+            <span>Django</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>SASS</span>
+            <span>Bootstrap</span>
+            <span>JavaScript</span>
+            <span>jQuery</span>
+            <span>git</span>
+            <span>SQL</span>
+            <span>Docker</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Mrz. 2021: Public Nextcloud-Instanz auf eigenem Homeserver</h3>
+          <p>
+            Durch vieles Reisen wurden Dateisynchronisationen zwischen verschiedenen Endgeräten und dauerhafte Verfügbarkeit immer mehr von Bedeutung für mich. Dementsprechend installierte ich manuell nach diversen Recherchen und eigenständig erarbeiteten Dokumentationen und Leitfäden, eine Nextcloud Instanz auf meinem Server.
+            Für automatisierte Snapshots des Containers baute ich u.a. ein Bash-Script welches mehrmals täglich und nachts zu bestimmten Zeiten ausgeführt wird.
+          </p>
+          <div class="list-container__skills">
+            <span>PHP</span>
+            <span>SQL</span>
+            <span>Linux-Server</span>
+            <span>Bash</span>
+            <span>Server-Security</span>
+            <span>SQL</span>
+            <span>nginx</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3>
+            <i class="fas fa-chevron-right"></i> Jan. 2021: Space Smasher Game Development
+          </h3>
+          <p>
+            Mit der Game-Engine Unity wurde im Rahmen einer Hochschul-Projektarbeit über ein Semester ein Computerspiel entwickelt. Die Hauptfigur war ein Astronaut der sich durch mehrere Planeten bzw. Level den Weg zum Erdball (durch Hindernisse, Aliens und Meteoriten) zurück erkämpfen musste. 
+            Zwei begeisterte Studierende und Ich entwickelten das Spiel mithilfe der Programmiersprache C#, Software-Tools, agilen Prozessen und Softwaremethodiken. Ich war u. a. für die Konzeption und das Design der Level, das Hauptmenü, die Spielstand- und Metadatenspeicherung zuständig.
+            Des Weiteren legte ich den Fokus auf eine saubere Versionsverwaltung unserer Teamarbeit.
+          </p>
+          <div class="list-container__skills">
+            <span>Unity</span>
+            <span>C#</span>
+            <span>Game Design</span>
+            <span>git</span>
+            <span>Agile software development</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Jun. 2020: Test Engineer bei DATEV eG</h3>
+          <p>
+            Nach BDD entwickelte ich Testkonzepte, Testdatenanpassungen mit SQL und via TypeScript / JavaScript in Verbindung mit Selenium / Protractor automatisierte UI-Tests, mit deren Hilfe Angular-Anwendungen im SaaS Umfeld auf das fachliche Sollverhalten überprüft werden konnten.
+            Der Bau einer Jenkins-Pipeline, die bei der Integration neuer Business-Logic im Frontend mithilfe von Groovy ausgeführt wurde, diente als hilfreicher Sicherheitsfaktor.
+          </p>
+          <div class="list-container__skills">
+            <span>Selenium</span>
+            <span>Protractor</span>
+            <span>JavaScript</span>
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>Scrum</span>
+            <span>TDD</span>
+            <span>BDD</span>
+            <span>SQL</span>
+            <span>git</span>
+            <span>UI Testing</span>
+            <span>Groovy</span>
+            <span>C#</span>
+            <span>Jenkins</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Sep. 2019: Eigener Home-Server</h3>
+          <p>
+            Aufgrund meiner steigenden Begeisterung für die Themen Linux, Virtualisierung und Cloud-Infrastrukturen baute ich mir meinen eigenen Home-Server und konfigurierte anschließend die Open-Source Server Software PROXMOX als Typ-1-Hypervisor.
+            Container wie ein dedizierter MySQL-Server, ein Server für Security Testing und verschiedene Betriebssysteme bzw. Distributionen (z. B. Windows 8, Ubuntu, Mint, SUSE, Kali etc.) fanden als virtuelle Maschinen praktischen Nutzen und ermöglichten mir viel Know-How.
+          </p>
+          <div class="list-container__skills">
+            <span>Proxmox</span>
+            <span>LXC</span>
+            <span>Virtualisierung</span>
+            <span>Linux-Server</span>
+            <span>Apache</span>
+            <span>nginx</span>
+            <span>Bash</span>
+            <span>SQL</span>
+            <span>PHP</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list-container">
+          <h3><i class="fas fa-chevron-right"></i> Okt. 2018: Entwicklung einer Vereinswebsite</h3>
+          <p>
+            Für einen gemeinnützigen Verein habe ich eine Website konzipiert, entwickelt und über mehrere Jahre (bis Mitte 2021) als Webmaster aufrechterhalten.
+            Spezifische Design-Änderungen wurden per Custom CSS oder eigenen Template-Imports vorgenommen, Analysetools eingebunden und Interaktionen (Cookies, Formulare etc.) via JavaScript programmiert. Im Wordpress-Backend wurden via PHP verschiedene Funktionalitäten (z.B. Dashboard) angepasst.
+            Des Weiteren administrierte ich den hierfür gehosteten Linux-Server.
+          </p>
+          <div class="list-container__skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>Wordpress</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+            <span>nginx</span>
+            <span>Linux-Server</span>
+            <span>git</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+<footer>
+  <div class="outer">
+    <p>Kontaktieren Sie mich gerne unter <a href="mailto:info@leon-eifler.de?subject=Projektanfrage">info@leon-eifler.de</a></p>
+    <div class="inner">
+      <p class="copyright">Copyright &copy 2022 by Leon Eifler. Alle Rechte vorbehalten.</p>
+      <div id="social">
+        <a target="_blank" href="https://www.gulp.de/gulp2/g/spezialisten/VCSOTDX1K">Gulp</a>
+        <a target="_blank" href="https://www.freelancejunior.de/freelancer/leon-41">FreelanceJunior</a>
+        <a target="_blank" href="https://www.xing.com/profile/Leon_Eifler3">Xing</a>
+        <a target="_blank" href="https://www.linkedin.com/in/leon-eifler/">LinkedIn</a>
+        <a target="_blank" href="https://github.com/the-linux-kid">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+</html>
