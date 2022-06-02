@@ -15,9 +15,11 @@ $max-width:1100px
   margin: 0
   padding: 0
   box-sizing: border-box
-
+html
+    font-size: 62.5%
 body
   font-family: 'Montserrat', sans-serif
+  font-size: 1.6rem
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)
   color: $white
   overflow-x: hidden
@@ -30,7 +32,7 @@ body
         text-decoration: underline
 #main-header
   background: $secondary-color
-  padding: 4rem 0
+  padding: 3rem 0
 
 .container
   max-width: $max-width
@@ -38,17 +40,17 @@ body
   text-align: center
 
 h1#slogan
-  font-size: 2.3rem
+  font-size: 2.8rem
   margin-bottom: 1rem
 
 #author
   font-family: 'Indie Flower', cursive
-  font-size: 160%
+  font-size: 2.2rem
   margin-top: 1rem
 
 span.dot
-  height: 10px
-  width: 10px
+  height: 1rem
+  width: 1rem
   background-color: #6e8470
   border-radius: 50%
   display: inline-block
@@ -59,21 +61,21 @@ span.dot
 #timeline
   ul.timeline__projects
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%)
-    padding: 50px 0
+    padding: 3rem 0
 
     // Vertical Line 
     li
       list-style: none
       position: relative
-      width: 6px
+      width: 0.6rem
       margin: 0 auto
-      padding-top: 50px
-      background: $white
+      padding-top: 6rem
+      background: white
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px      
       div.list-container
         position: relative
         bottom: 0
-        width: 400px
+        width: 40rem
         padding: 1rem
         background: $secondary-color
         transition: all 0.5s ease-in-out
@@ -97,20 +99,20 @@ span.dot
                 padding: 0.3rem 0.4rem
 
       &:nth-child(odd) div.list-container
-        left: 40px
-        transform: translate(200px, 0)
+        left: 4rem
+        transform: translate(40rem, 0)
 
       &:nth-child(even) div.list-container
-        left: -434px
-        transform: translate(-200px, 0)
+        left: -43.4rem
+        transform: translate(-40rem, 0)
 
       &:after
         content: ''
         position: absolute
         left: 50%
         bottom: 0
-        width: 25px
-        height: 25px
+        width: 2.5rem
+        height: 2.5rem
         background: inherit
         transform: translateX(-50%)
         border-radius: 50%
@@ -119,19 +121,19 @@ span.dot
   div.list-container:before
     content: ''
     position: absolute
-    bottom: 5px
+    bottom: 0.5rem
     width: 0
     height: 0
     border-style: solid
 
   ul.timeline__projects li
     &:nth-child(odd) div.list-container:before
-      left: -15px
+      left: -1.5rem
       border-width: 8px 16px 8px 0
       border-color: transparent $secondary-color transparent transparent
 
     &:nth-child(even) div.list-container:before
-      right: -15px
+      right: -1.5rem
       border-width: 8px 0 8px 16px
       border-color: transparent transparent transparent $secondary-color
 
@@ -193,31 +195,31 @@ footer
 @media (max-width: 900px)
 
     h1#slogan 
-        font-size: 2.1rem
+        font-size: 3rem
     #timeline ul.timeline__projects li
         & div.list-container
-            width: 250px
+            width: 35rem
 
         &:nth-child(even) div.list-container
-            left: -284px
+            left: -39rem
 
 @media (max-width: 600px)
 
     h1#slogan
-        font-size: 1.6rem
+        font-size: 3rem
         padding: 0 3rem
 
     #timeline ul.timeline__projects li
-        margin-left: 20px
+        margin-left: 2rem
 
         div.list-container
-            width: calc(100vw - 6rem)
+            width: calc(100vw - 8rem)
 
         &:nth-child(even) div.list-container
-            left: 40px
+            left: 4rem
 
             &:before
-                left: -15px
+                left: -1.5rem
                 border-width: 8px 16px 8px 0
                 border-color: transparent $secondary-color transparent transparent
     footer 
