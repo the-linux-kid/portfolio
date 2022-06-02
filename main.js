@@ -1,5 +1,5 @@
 const items = document.querySelectorAll('#timeline li');
-
+const tabletWidthLandscape = 1000
 const isInViewport = el => {
   const rect = el.getBoundingClientRect(); // returns size of the object an its relative position to the viewport
   return (
@@ -11,8 +11,26 @@ const isInViewport = el => {
   );
 };
 
+const isXPercentInViewport = function(el, percentVisible) {
+  let
+    rect = el.getBoundingClientRect(),
+    windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+  return !(
+    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-rect.height) * 100)) < percentVisible ||
+    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+  )
+};
+
 const run = () =>
   items.forEach(item => {
+    // render the item faster on landscape mode when the width falls under a specific value
+    if (window.innerWidth < tabletWidthLandscape && (window.innerWidth > window.innerHeight)) {
+      // The user is in landscape mode!
+      if(isXPercentInViewport(item)) {
+        item.classList.add('show');
+      }
+    } 
     if (isInViewport(item)) {
       item.classList.add('show');
     }
